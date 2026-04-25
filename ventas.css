@@ -1,35 +1,152 @@
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* BODY */
 body {
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     background-color: #0f172a;
     color: white;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+
+    min-height: 100vh;
+    padding: 20px;
 }
 
+/* CONTENEDOR */
 .contenedor {
     background-color: #1e293b;
-    padding: 20px;
-    border-radius: 10px;
-    width: 300px;
+    padding: 25px;
+    border-radius: 12px;
+
+    width: 100%;
+    max-width: 400px;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
 }
 
+/* TITULO */
+h1{
+    font-size: 26px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* LABELS */
+label{
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* INPUTS */
 input {
     width: 100%;
-    margin-bottom: 10px;
-    padding: 5px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+
+    font-size: 16px;
 }
 
+/* BOTON */
 button {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     background-color: #22c55e;
     border: none;
     color: white;
     cursor: pointer;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-top: 5px;
+    transition: 0.3s;
 }
 
 button:hover {
     background-color: #16a34a;
+}
+
+/* RESULTADOS */
+h2{
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+p{
+    margin-top: 8px;
+    font-size: 15px;
+}
+
+/* 📱 CELULARES */
+@media (max-width: 480px){
+
+    .contenedor{
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    h1{
+        font-size: 22px;
+    }
+
+    input{
+        font-size: 15px;
+        padding: 9px;
+    }
+
+    button{
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    h2{
+        font-size: 18px;
+    }
+
+    p{
+        font-size: 14px;
+    }
+}
+
+/* 📲 TABLETS */
+@media (min-width: 481px) and (max-width: 768px){
+
+    .contenedor{
+        max-width: 500px;
+        padding: 30px;
+    }
+
+    h1{
+        font-size: 28px;
+    }
+
+    input{
+        font-size: 17px;
+    }
+
+    button{
+        font-size: 17px;
+    }
+}
+
+/* 💻 PANTALLAS GRANDES */
+@media (min-width: 1024px){
+
+    .contenedor{
+        max-width: 450px;
+        padding: 35px;
+    }
+
+    h1{
+        font-size: 30px;
+    }
 }
